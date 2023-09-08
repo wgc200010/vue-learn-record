@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/demo-def" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/first" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/3.vue-cli/父传子。子传父，兄弟" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4.动态组件插槽等/chacao" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4.动态组件插槽等/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4.动态组件插槽等/demo-3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4.动态组件插槽等/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4.动态组件插槽等/demo-cart01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/5.luyou/demo-toutiao" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/5.luyou/router-demo1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react/my-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test_practice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/v-model-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/黑马头条项目/toutiaopro" vcs="Git" />
+  </component>
+</project>

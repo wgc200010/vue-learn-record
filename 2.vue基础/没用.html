@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/vue-2.6.12.js"></script>
+</head>
+
+<body>
+    <img src="./Rme(2).jpg" @click="alt" alt="">
+    <script>
+        const vm = new Vue({
+            el: 'img',
+            data: {},
+            methods: {
+                alt() {
+                    alert("sdf")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

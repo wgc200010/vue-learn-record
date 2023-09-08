@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用vue控制 -->
+    <div id="app">
+        <p v-text="username"></p>
+        <hr>
+        <!-- 覆盖原本存在的内容 -->
+        <p v-text="gen">,,,,,,,,,,,,</p>
+        <!-- {{}}不会覆盖 -->
+        <!-- v-html可以渲染标签 -->
+        <p v-html="info"></p>
+    </div>
+
+    <!-- 导入vue库文件 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 创建vue实例对象 -->
+    <script>
+        const vm = new Vue({
+            // el固定写法选择器,vue控制区域
+            el: '#app',
+            data: {
+                username: 'dsf',
+                gen: "123",
+                info: '<h4 >fgggg</h4>'
+            }
+        })
+    </script>
+</body>
+
+</html>

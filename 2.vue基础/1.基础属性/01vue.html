@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用vue控制 -->
+    <div id="app">
+        <button>Chage Flag</button>
+        <!-- v-if动态移除创建元素 -->
+        <p v-if="flag">这是v-if控制 {{username}}</p>
+        <!-- v-show隐藏方式为display:none -->
+        <p v-show="flag">这是v-show控制 {{username}}</p>
+    </div>
+
+    <!-- 导入vue库文件 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 创建vue实例对象 -->
+    <script>
+        const vm = new Vue({
+            // el固定写法选择器,vue控制区域
+            el: '#app',
+            data: {
+                //如果Ture则显示，false否则隐藏
+                flag: true
+            }
+        })
+    </script>
+</body>
+
+</html>

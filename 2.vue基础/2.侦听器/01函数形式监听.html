@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="username">
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script src="./lib/jquery-v3.6.0.js"></script>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                //1.函数形式监听，打开页面默认不会直接执行
+                username: "admin"
+            },
+            // watch节点，用来定义监听器
+            watch: {
+                //监听器本质函数，数据名作为方法名
+                //函数形式默认不会直接触发
+                username(newVal) {
+                    //每次监听到数据变化都回触发
+                    // console.log("监听username", newVal, oldVal)
+                    $.get('https://www.escook.cn/api/finduser/' + newVal, function(res) {
+                        console.log(res)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

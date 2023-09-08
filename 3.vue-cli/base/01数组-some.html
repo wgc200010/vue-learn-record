@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = ['asd', 'zxc', 'zzz']
+            // arr.forEach((item, index) => {
+            //     //一共三次，无法在中间停止，return也不行
+            //     console.log('ok')
+            //     if (item == 'zxc') {
+            //         console.log(index)
+            //     }
+            // })
+
+
+        arr.some((item, index) => {
+            //some循环可以中止
+            console.log('ok')
+            if (item == 'zxc') {
+                console.log(index)
+                return true
+            }
+        })
+    </script>
+</body>
+
+</html>

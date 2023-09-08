@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用vue控制 -->
+    <div id="app">
+        <!-- 事件修饰，阻止跳转 -->
+        <a href="http://www.baidu.com" @click.prevent="show">跳转百度</a>
+
+        <hr>
+        <div style="height: 150px;background-color:burlywood;padding-left: 100px;;line-height: 150px;" @click="div">
+            <!-- 阻止冒泡 -->
+            <button @click.stop="btn">按钮</button>
+        </div>
+    </div>
+
+    <!-- 导入vue库文件 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 创建vue实例对象 -->
+    <script>
+        const vm = new Vue({
+            // el固定写法选择器,vue控制区域
+            el: '#app',
+            data: {},
+            methods: {
+                show(e) {
+                    //阻止跳转
+                    // e.preventDefault()
+                    console.log("点击了a")
+                },
+                btn() {
+                    console.log("按钮")
+                },
+                div() {
+                    console.log("div")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

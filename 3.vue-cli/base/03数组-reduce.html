@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [{
+                id: 1,
+                name: "sdad",
+                state: true,
+                price: 12,
+                count: 1
+            }, {
+                id: 2,
+                name: "222",
+                state: false,
+                price: 1,
+                count: 21
+            }, {
+                id: 3,
+                name: "333",
+                state: true,
+                price: 10,
+                count: 20
+            }]
+            //老写法
+            // let amt = 0
+            // arr.filter(item => item.state).forEach(item => {
+            //     amt += item.price * item.count
+            // })
+            // console.log(amt)
+
+        // arr.filter(item => item.state).reduce((累加的结果,当前循环项) => {},初始值)
+        // const res = arr.filter(item => item.state).reduce((amt, item) => {
+        //     return amt += item.price * item.count
+        // }, 0)
+
+        //简化写法
+        const res = arr.filter(item => item.state).reduce((amt, item) => amt += item.price * item.count, 0)
+        console.log(res)
+    </script>
+</body>
+
+</html>

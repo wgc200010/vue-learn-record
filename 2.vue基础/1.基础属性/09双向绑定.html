@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用vue控制 -->
+    <div id="app">
+        <p>用户名字：{{username}}</p>
+        <!-- 双向绑定 v-model-->
+        <input type="text" v-model="username">
+        <hr>
+        <input type="text" :value="username">
+        <hr>
+        <!-- 不加number修饰符，默认为字符串拼接 -->
+        <input type="text" v-model.number="n1">+<input type="text" v-model.number="n2" name="" id="">=<span>{{n1+n2}}</span>
+        <hr>
+        <!-- 去掉空格 -->
+        <input type="text" v-model.trim="username">
+        <button @click="show">获取用户名</button>
+    </div>
+
+    <!-- 导入vue库文件 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 创建vue实例对象 -->
+    <script>
+        const vm = new Vue({
+            // el固定写法选择器,vue控制区域
+            el: '#app',
+            data: {
+                username: 'dsf',
+                n1: 1,
+                n2: 2
+            },
+            methods: {
+                show() {
+                    console.log(`用户名："${this.username}"`)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

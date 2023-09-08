@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="username">
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script src="./lib/jquery-v3.6.0.js"></script>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                username: "admin"
+            },
+            // watch节点，用来定义监听器
+            watch: {
+                //对象格式
+                username: {
+                    //处理函数
+                    handler(newVal, oldVal) {
+                        console.log(newVal, oldVal)
+
+                    },
+                    //进来直接触发，默认为关闭false
+                    immediate: true
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

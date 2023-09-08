@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="a1">
+    <input type="text" v-model="ph">
+    <!-- <button >打开</button>  -->
+    <a :href="ph" id="a1" @click="asd">打开</a>
+  </div>
+  <script src="./lib//vue-2.6.12.js"></script>
+  <script>
+    const vm = new Vue({
+      // el固定写法选择器,vue控制区域
+      el: '#a1',
+      data: {
+        ph: ''
+      },
+      methods: {
+        asd() {
+          console.log(this.ph);
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
